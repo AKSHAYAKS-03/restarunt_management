@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;      
+            margin: 0;
+            padding: 0;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif; /* Optional: Set a font family */
+            color: black; /* Optional: Set text color */
+        }
+         
+        
+        .form-container {
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 20px;
+            width: 300px;
+            margin: 60px auto;
+            box-shadow: 5px 10px #888888;
+        }
+        .form-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-title {
+            margin-top: 20px;
+        }
+        .form-table {
+            background-color: #f2f2f2;
+            border-radius: 20px;
+            padding: 20px;
+            width: 100%;
+        }
+        .form-table th {
+            text-align: left;
+        }
+        .form-submit {
+            width: 100%;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: darkgray;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+        }
+        .form-submit:hover {
+            background-color: #888888;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-header">Who's Watching</h2>
+        <form action="NewServlet" method="get"> 
+            <table class="form-table">
+                <tr>
+                    <th><input type="submit" class="form-submit" name="role" value="Owner"></th>
+                </tr>
+                <tr>
+                    <th><input type="submit" class="form-submit" name="role" value="Employee"></th>
+                </tr>
+                <tr>
+                    <th><input type="submit" class="form-submit" name="role" value="Customer"></th>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
