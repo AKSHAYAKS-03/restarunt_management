@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <style>
+       
+                 body {
+            margin: 0;
+            padding: 0;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif; /* Optional: Set a font family */
+            color: white; /* Optional: Set text color */
+       
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            position: relative; /* Ensure the container acts as a reference for positioning */
+        }
+        .search-form {
+            margin-bottom: 20px;
+        }
+        .search-input {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .search-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .search-btn:hover {
+            background-color: #0056b3;
+        }
+        .book_img {
+            width: 50%; /* Set width to fit two divs side by side with some spacing */
+            margin-top: 20px;
+            margin-right: 10px; /* Align the div to the right */
+            position: relative; /*on the div absolutely */
+            top: 0; /* Align the div to the top */
+          
+        }
+        .sticky_img {
+            width: 40px;
+        }
+     body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.search-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#search-bar {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-gallery img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.popup {
+    position: absolute;
+    top: -200px; /* Adjust as needed */
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+
+.image-container:hover .popup {
+    display: block;
+}
+
+        
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const searchBar = document.getElementById('search-bar');
+    searchBar.addEventListener('input', filterImages);
+});
+
+function filterImages() {
+    const searchValue = this.value.toUpperCase();
+    const images = document.querySelectorAll('.image-gallery img');
+
+    images.forEach(image => {
+        const altText = image.alt.toUpperCase();
+        if (altText.includes(searchValue)) {
+            image.style.display = 'block';
+        } else {
+            image.style.display = 'none';
+        }
+    });
+}
+
+        </script>
+</head>
+<body>
+       <div class="book_img">
+            <a href="booking.html" target="iframe_a"><img src="cart.jpg" class="sticky_img"></a>
+        </div>
+    <div class="container">
+        <h1>Search Page</h1>
+        
+
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search items...">
+    </div>
+    <div class="image-gallery">
+    <!-- First image -->
+    <div class="image-container">
+        
+        <img src="bur.jpg" alt="Burger">
+        <div class="image-overlay">
+            <h3>Burger</h3>
+<button>+</button> <button>-</button>        </div>
+    </div>
+
+    <!-- Second image -->
+    <div class="image-container">
+        <img src="frichicken.jpg" alt="Pizza">
+        <div class="image-overlay">
+            <h3>Friedchicken</h3>
+<button>+</button> <button>-</button>        </div>
+    </div>
+     <div class="image-container">
+        <img src="fries.jpg" alt="Pizza">
+        <div class="image-overlay">
+            <h3>Fries</h3>
+<button>+</button> <button>-</button>        </div>
+    </div>
+     <div class="image-container">
+        <img src="piza.jpg" alt="Pizza">
+        <div class="image-overlay">
+            <h3>Pizza</h3>
+<button>+</button> <button>-</button>        </div>
+    </div>
+     <div class="image-container">
+        <img src="pavbaji.jpg" alt="Pizza">
+        <div class="image-overlay">
+            <h3>Pavbaji</h3>
+<button>+</button> <button>-</button>        </div>
+    </div>
+     <div class="image-container">
+        <img src="naan.jpg" alt="naan">
+        <div class="image-overlay">
+            <h3>Naan</h3>
+            <button>+</button> <button>-</button>
+
+        </div>
+    </div>
+
+</div>
+
+    </div>
+    <script src="scripts.js"></script>
+
+
+    </div>
+</body>
+</html>

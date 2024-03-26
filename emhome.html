@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>ABC RESTARUNT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+                 body {
+            margin: 0;
+            padding: 0;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif; /* Optional: Set a font family */
+            color: white; /* Optional: Set text color */
+        }
+
+        .topname {
+            padding-top: 20px;
+            height: 100px;
+            width: 100%;
+            color: whitesmoke;margin-top:0;
+            background-color: black;   
+        }
+
+        .link_login {
+            height: 25px;
+            background-color: black;
+            border: 2px;
+            border-radius: 5px;
+            padding: 5px;
+            margin-top: -20px;
+            float: right;
+            font-size: 20px;
+            margin-right: 20px;
+            color: lightskyblue;
+        }
+
+        .link_login:hover {
+            background-color: whitesmoke;
+        }
+
+        .link_signup {
+            height: 25px;
+            background-color: black;
+            border: 2px;
+            border-radius: 5px;
+            padding: 5px;
+            margin-top: -20px;
+            float: right;
+            font-size: 20px;
+            margin-right: 20px;
+            color: lightskyblue;
+        }
+
+        .link_signup:hover {
+            background-color: whitesmoke;
+        }
+        .desc{
+            width:auto;
+            height: auto;border-radius: 20px;
+            padding: 20px;margin-top:0px;
+            background-color: lavenderblush;
+            align-items: center;
+            animation-name: descani;
+             animation-duration: 3s;
+             animation-iteration-count:infinite;
+
+
+        }
+        @keyframes descani{
+            from {background-color: lavenderblush;}
+            to {background-color: wheat;}
+
+        }
+        table th,td{
+           border-width: 10px;
+        }
+        .book_img{
+            height: 100px;width: 100px;background-color: black;position: sticky;position: -webkit-sticky;top:0;align-items: center;text-align: center;
+            transition: width 2s;height:2s;margin-left: 100px;border: 2px solid black;border-radius: 20px;
+            margin-top: 100px;
+        }
+        .book_img:hover{
+            width:150px;height:120px;
+            
+        }
+        .sticky_img{
+            top:30px;
+            width: 90px;
+            height: 90px;margin-top: 7px;
+            
+        }
+        .iframea{
+          position:relative;height:300px ;width:500px; margin-left:500px;top:-150px;border: 2px solid black;padding:20px;background-color: wheat;border-radius: 40px;
+            
+        }
+        iframe{
+            height: 250px;width: 450px;padding: 20px;
+        }
+        .features{
+            position:relative;margin-left: 250px;
+            width: 800px;
+            height:300px;
+            top:5px;
+            background-color: lavenderblush;color: whitesmoke;padding: 50px;
+            animation-name: featureani;animation-duration: 10s;
+             animation-iteration-count:infinite;
+             background-image:url("dis.jpg");
+        }
+       @keyframes featureani {
+    from{
+        background-color: lavenderblush;
+        background-image: url("dis.jpg");
+        background-size: cover;
+    }
+    to {
+        background-color: wheat;
+        background-image: url("deal.jpg");
+        background-size: cover;
+    }
+}
+
+     </style>
+      <script>
+            function start(){
+                
+            }
+     </script>
+</head>
+    <body style="background-color:linen;">
+     
+    <div class="topname">
+        <center>
+            <h3 style="float:left;padding:20px;">EMPLOYEE</h3>
+            <h1>ABC RESTAURANT</h1></center>
+        <div class="link_signup"><a href="singin.html"> Signin </a></div>
+        <div class="link_login"><a href="login.html"> Login </a></div>
+        <div class="link_signup"><button onclick="window.location.href = 'empatt.html';">Attendance</button></div>
+
+<div class="link_signup"><button onclick="window.location.href = 'search.html';">Search</button></div>
+
+    </div>
+        <br><br>
+    <center><div class="desc">
+                      <h2>DESCIRIPTION</h2><hr><p>Descend into a world that was once the sole preserve of royalty, step onto the soft, white sand beaches at a secluded island or discover the hidden secrets of mist-draped hills with Taj</p>
+        </div></center>
+    <br><br>
+    <hr>
+        <div class="features"><center><h1>FEATURES</h1></center></div><br><br>
+    
+        <center><h1 style="margin-top:100px;background-color: wheat;">THANKYOU FOT THE VISIT</h1></center>
+ </body>
+   
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Attendance</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+       
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif; /* Optional: Set a font family */
+            color: black; /* Optional: Set text color */
+        }
+    
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    form {
+        margin-top: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    .submitted-data {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Employee Attendance</h1>
+    <form id="attendance-form" action="#" method="post" onsubmit="return validateForm()">
+        <label for="employee_id">Employee ID:</label>
+        <input type="text" id="employee_id" name="employee_id" required>
+
+        <label for="employee_name">Employee Name:</label>
+        <input type="text" id="employee_name" name="employee_name" required>
+
+        <label for="attendance_date">Attendance Date:</label>
+        <input type="text" id="attendance_date" name="attendance_date" placeholder="YYYY-MM-DD" required>
+
+        <label for="attendance_time">Attendance Time:</label>
+        <input type="text" id="attendance_time" name="attendance_time" placeholder="HH:MM" required>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="submitted-data" class="submitted-data" style="display: none;">
+        <h2>Submitted Data</h2>
+        <p><strong>Employee ID:</strong> <span id="submitted-employee-id"></span></p>
+        <p><strong>Employee Name:</strong> <span id="submitted-employee-name"></span></p>
+        <p><strong>Attendance Date:</strong> <span id="submitted-attendance-date"></span></p>
+        <p><strong>Attendance Time:</strong> <span id="submitted-attendance-time"></span></p>
+    </div><br>
+    <a href="emhome.html">Home</a>
+</div>
+
+<script>
+function validateForm() {
+    var employeeID = document.getElementById("employee_id").value.trim();
+    var employeeName = document.getElementById("employee_name").value.trim();
+    var attendanceDate = document.getElementById("attendance_date").value.trim();
+    var attendanceTime = document.getElementById("attendance_time").value.trim();
+
+    if (employeeID === "" || employeeName === "" || attendanceDate === "" || attendanceTime === "") {
+        alert("Please fill in all fields.");
+        return false;
+    }
+
+    // Additional validation logic can be added here if needed
+
+    // If the form is valid, display the submitted data
+    displaySubmittedData(employeeID, employeeName, attendanceDate, attendanceTime);
+
+    // Prevent form submission
+    return false;
+}
+
+function displaySubmittedData(employeeID, employeeName, attendanceDate, attendanceTime) {
+    document.getElementById("submitted-employee-id").innerText = employeeID;
+    document.getElementById("submitted-employee-name").innerText = employeeName;
+    document.getElementById("submitted-attendance-date").innerText = attendanceDate;
+    document.getElementById("submitted-attendance-time").innerText = attendanceTime;
+    document.getElementById("submitted-data").style.display = "block";
+}
+</script>
+
+</body>
+</html>

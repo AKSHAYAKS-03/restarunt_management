@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Title</title>
+
+<style>
+         body {
+            margin: 0;
+            padding: 0;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif; /* Optional: Set a font family */
+            color: black; /* Optional: Set text color */
+        }
+.form {
+    width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+                background-color:white;
+
+}
+
+.aaa {
+    margin-bottom: 10px;
+    width: 300px;
+    padding: 5px;
+}
+
+.select {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#error {
+    margin: 10px;
+    visibility: hidden;
+}
+
+#sub {
+    background-color: lightblue;
+    border: none;
+    border-radius: 2px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+<div class="form">
+    
+  <form onsubmit="return validateForm()" id="formid" action="emhome.html" method="post">
+   
+    <label for="name">Name</label>
+    <input type="text" class="aaa" id="name">
+    <span id="nameError" class="error"></span>
+    
+    <label for="name">Password </label>
+    <input type="password" class="aaa" id="pass">
+    <span id="passError" class="error"></span>
+   
+    <label for="age">Age</label>
+    <input type="text" class="aaa" id="age">
+    <span id="ageError" class="error"></span>
+   
+    <label for="dob">Birth Date</label>
+    <input type="text" class="aaa" id="dob" placeholder="YYYY-MM-DD">
+    <span id="dobError" class="error"></span>
+   
+    <label for="email">Email</label>
+    <input type="email" class="aaa" id="email">
+    <span id="emailError" class="error"></span>
+ 
+    <label for="state">State</label>
+    <select class="aaa" id="state">
+      <option value="" disabled selected hidden>--Please Select--</option>
+      <option>Tamil Nadu</option>
+      <option>Kerala</option>
+      <option>Telangana</option>
+      <option>Andhra Pradesh</option>
+    </select>
+    <span id="stateError" class="error"></span>
+     
+    <label for="phn">Phone number</label>
+    <input type="text" class="aaa" id="phn">
+    <span id="phnError" class="error"></span>
+   
+    <br><br><input type="submit" class="aaa" id="sub">
+
+    <script>
+    function validateForm() {
+        var name = document.getElementById("name").value.trim();
+        var age = document.getElementById("age").value.trim();
+        var pas = document.getElementById("pass").value.trim();
+        var dob = document.getElementById("dob").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var state = document.getElementById("state").value.trim();
+        var phn = document.getElementById("phn").value.trim();
+        var isValid = true;
+
+        if (name === "") {
+            document.getElementById("nameError").innerText = "Name is required";
+            document.getElementById("nameError").style.color = 'red'; // Set color to red
+            isValid = false;
+        } else {
+            document.getElementById("nameError").innerText = "";
+        }
+        if (pas === "") {
+            document.getElementById("passError").innerText = "password is required";
+                        document.getElementById("passError").style.color = 'red'; // Set color to red
+
+            isValid = false;
+        } else {
+            document.getElementById("passError").innerText = "";
+        }
+
+        if (age === "") {
+            document.getElementById("ageError").innerText = "Age is required";
+            document.getElementById("ageError").style.color = 'red'; // Set color to red
+
+            isValid = false;
+        } else {
+            document.getElementById("ageError").innerText = "";
+        }
+
+        if (dob === "") {
+            document.getElementById("dobError").innerText = "Date of Birth is required";
+            isValid = false;
+                                    document.getElementById("dobError").style.color = 'red'; // Set color to red
+
+        } else {
+            document.getElementById("dobError").innerText = "";
+        }
+
+        if (email === "") {
+            document.getElementById("emailError").innerText = "Email is required";
+                                    document.getElementById("emailError").style.color = 'red'; // Set color to red
+
+            isValid = false;
+        } else {
+            document.getElementById("emailError").innerText = "";
+        }
+
+        if (state === "") {
+            document.getElementById("stateError").innerText = "State is required";
+                                    document.getElementById("stateError").style.color = 'red'; // Set color to red
+
+            isValid = false;
+        } else {
+            document.getElementById("stateError").innerText = "";
+        }
+
+        if (phn === "") {
+            document.getElementById("phnError").innerText = "Phone number is required";
+                                    document.getElementById("phnError").style.color = 'red'; // Set color to red
+
+            isValid = false;
+        } else {
+            document.getElementById("phnError").innerText = "";
+        }
+
+        return isValid;
+    }
+    </script>
+  </form>
+</div>
+</body>
+</html>
